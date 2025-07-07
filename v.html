@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velvora Empire</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #0d0d0d;
+      color: #ffffff;
+    }
+    header {
+      background: linear-gradient(135deg, #1f1f1f, #2c003e);
+      padding: 60px 20px 40px;
+      text-align: center;
+      position: relative;
+    }
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3em;
+      color: #ff007f;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      color: #ccc;
+    }
+    .hero-banner {
+      text-align: center;
+      padding: 40px 20px;
+      background: url('https://images.unsplash.com/photo-1603329246545-d83b4d307b3f') no-repeat center center/cover;
+      color: white;
+    }
+    .hero-banner h2 {
+      font-size: 2.2em;
+      margin-bottom: 10px;
+    }
+    .hero-banner p {
+      font-size: 1em;
+      max-width: 600px;
+      margin: auto;
+    }
+    .social-link {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .social-link a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    .social-link img {
+      width: 28px;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+    .main-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 30px;
+    }
+    .product {
+      background: #1a1a1a;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 0, 85, 0.3);
+      width: 280px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .product:hover {
+      transform: translateY(-10px);
+    }
+    .product img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    .product p {
+      font-size: 1.1em;
+      margin: 10px 0;
+      font-weight: bold;
+    }
+    input[type="text"] {
+      padding: 10px;
+      width: 90%;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 6px;
+      background-color: #ff0055;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button[disabled] {
+      background-color: #555;
+      cursor: not-allowed;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #aaa;
+      background-color: #111;
+      border-top: 1px solid #333;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="social-link">
+      <a href="https://instagram.com/velvora.empire" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram">@velvora.empire
+      </a>
+    </div>
+    <h1>Velvora Empire</h1>
+    <p>Wear the vibe. Rule the empire. 👑</p>
+  </header>
+
+  <section class="hero-banner">
+    <h2>Unleash Your Inner Royalty</h2>
+    <p>Step into the world of bold fashion accessories that command attention. Own your vibe with Velvora’s signature rings, shades, and more.</p>
+  </section>
+
+  <div class="main-container">
+    <div class="product">
+      <form id="form-crown">
+        <img src="/mnt/data/f81468aa-c7d1-439e-83ed-936bece65876.png" alt="Crown Pendant">
+        <p>Crown Pendant</p>
+        <input type="hidden" name="product" value="Crown Pendant">
+        <label for="instaID-crown">Your Instagram ID:</label>
+        <input type="text" id="instaID-crown" name="instaID" placeholder="@your_username" required>
+        <button type="button" onclick="unlockSubmit('crown')">Message us on Instagram</button>
+        <h3>Please send the address to our dm!!</h3>
+        <button id="submitBtn-crown" disabled onclick="confirmOrder('crown')">Buy Now</button>
+      </form>
+    </div>
+
+    <div class="product">
+      <form id="form-bracelet">
+        <img src="/mnt/data/ChatGPT Image Jul 7, 2025, 01_24_56 AM.png" alt="Bold Bracelet">
+        <p>Bold Bracelet</p>
+        <input type="hidden" name="product" value="Bold Bracelet">
+        <label for="instaID-bracelet">Your Instagram ID:</label>
+        <input type="text" id="instaID-bracelet" name="instaID" placeholder="@your_username" required>
+        <button type="button" onclick="unlockSubmit('bracelet')">Message us on Instagram</button>
+        <h3>Please send the address to our dm!!</h3>
+        <button id="submitBtn-bracelet" disabled onclick="confirmOrder('bracelet')">Buy Now</button>
+      </form>
+    </div>
+
+    <div class="product">
+      <form id="form-shades">
+        <img src="/mnt/data/ChatGPT Image Jul 7, 2025, 01_31_16 AM.png" alt="Neon Shades">
+        <p>Neon Shades</p>
+        <input type="hidden" name="product" value="Neon Shades">
+        <label for="instaID-shades">Your Instagram ID:</label>
+        <input type="text" id="instaID-shades" name="instaID" placeholder="@your_username" required>
+        <button type="button" onclick="unlockSubmit('shades')">Message us on Instagram</button>
+        <h3>Please send the address to our dm!!</h3>
+        <button id="submitBtn-shades" disabled onclick="confirmOrder('shades')">Buy Now</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Velvora Empire. All rights reserved.
+  </footer>
+
+  <script>
+    function unlockSubmit(product) {
+      const instaInput = document.getElementById(`instaID-${product}`);
+      const submitBtn = document.getElementById(`submitBtn-${product}`);
+
+      if (instaInput.value.trim() === "") {
+        alert("Please enter your Instagram ID first.");
+        return;
+      }
+
+      window.open("https://instagram.com/velvora.empire", "_blank");
+      submitBtn.disabled = false;
+    }
+
+    function confirmOrder(product) {
+      const instaID = document.getElementById(`instaID-${product}`).value;
+      alert(`Thank you! We'll DM you at ${instaID} about your ${product.replace(/-/g, ' ')} order.`);
+    }
+  </script>
+</body>
+</html>
